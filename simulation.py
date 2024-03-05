@@ -23,18 +23,16 @@ class SIMULATION:
         self.robot = ROBOT()
         
 
-        
-
-        
     def Run(self):
                 
         for _ in range(1000):
             p.stepSimulation()
             self.robot.Sense(_)
-            self.robot.Act(_)
+            self.robot.Think(_)
+            self.robot.Act()
             
     
-            time.sleep(1/10)
+            time.sleep(1/5)
             print(_)
            
     def __del__(self):
