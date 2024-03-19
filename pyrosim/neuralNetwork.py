@@ -15,7 +15,8 @@ class NEURAL_NETWORK:
         for line in f.readlines():
 
             self.Digest(line)
-
+            
+       
         f.close()
 
     def Print(self):
@@ -29,12 +30,14 @@ class NEURAL_NETWORK:
         print("")
         
     def Update(self):
+      
         for _ in self.neurons:
             if self.neurons[_].Is_Sensor_Neuron():
                 #print(self.neurons[_])
                 self.neurons[_].Update_Sensor_Neuron()
             else:
-                self.neurons[_].Update_Hidden_Or_Motor_Neuron()
+                self.neurons[_].Update_Hidden_Or_Motor_Neuron(self.neurons, self.synapses)
+                
                 
     def Get_Neuron_Names(self):
         return self.neurons.keys()

@@ -32,7 +32,7 @@ class SIMULATION:
             self.robot.Act()
             
     
-            time.sleep(1/5)
+            time.sleep(1/240)
             print(_)
            
     def __del__(self):
