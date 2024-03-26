@@ -10,4 +10,5 @@ phaseOffsetFrontLeg = -np.pi/8
 
 numberOfGenerations = 10
 numberOfTimeSteps = 1000
+populationSize = 10
 

@@ -12,8 +12,7 @@ from world import WORLD
 from robot import ROBOT
 
 class SIMULATION:
-    def __init__(self, directOrGUI):
-        
+    def __init__(self, directOrGUI, solutionID):
         if directOrGUI == "DIRECT":
             self.physicsClient = p.connect(p.DIRECT)
             self.GUI = False
@@ -25,7 +24,7 @@ class SIMULATION:
         p.setGravity(0,0,-9.8)
         
         self.world = WORLD()
-        self.robot = ROBOT()
+        self.robot = ROBOT(solutionID)
         
 
     def Run(self):
@@ -40,8 +39,8 @@ class SIMULATION:
                 time.sleep(1/540)
             #print(_)
             
-    def Get_Fitness(self):
-        self.robot.Get_Fitness()
+    def Get_Fitness(self, solutionID):
+        self.robot.Get_Fitness(solutionID)
            
     def __del__(self):
         #self.robot.Save_Values()    

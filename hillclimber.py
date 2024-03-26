@@ -1,8 +1,7 @@
 import copy
-from xml.etree.ElementInclude import include
 from solution import SOLUTION
 from constants import numberOfGenerations
-import copy
+
 
 class HILL_CLIMBER:
     def __init__(self):
