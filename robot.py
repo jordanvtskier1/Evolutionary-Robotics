@@ -39,12 +39,22 @@ class ROBOT:
                 
 
     def Save_Values(self):
-        for i in self.sensors:
-            self.sensors[i].Save_Values()
         for i in self.motors:
             self.motors[i].Save_Values()
-            
+        for i in self.sensors:
+            self.sensors[i].Save_Values()
+        
+ 
     def Think(self,t):
         self.nn.Update()
-        self.nn.Print()
+        #self.nn.Print()
+        
+    def Get_Fitness(self):
+        stateOfLinkZero = p.getLinkState(self.robot,0)
+        positionOfLinkZero = stateOfLinkZero[0]
+        xCoordinateOfLinkZero = positionOfLinkZero[0]
+        f = open("fitness.txt", "w")
+        f.write(str(xCoordinateOfLinkZero))
+        f.close()
+        exit()
         

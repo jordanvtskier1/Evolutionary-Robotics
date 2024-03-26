@@ -28,6 +28,6 @@ class MOTOR:
         self.motorValues = self.amplitude * np.sin(self.frequency * targetAngles + self.offset)    
         """
   
-    """
+    
     def Save_Values(self):
-        np.save(f"data/{self.jointName}targetAnglesData",self.motorValues)"""
+        np.save(f"data/{self.jointName}targetAnglesData",self.motorValues)

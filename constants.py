@@ -8,3 +8,6 @@ amplitudeFrontLeg = np.pi/3
 frequencyFrontLeg = 8
 phaseOffsetFrontLeg = -np.pi/8
 
+numberOfGenerations = 10
+numberOfTimeSteps = 1000
+
